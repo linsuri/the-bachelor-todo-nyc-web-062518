@@ -47,6 +47,7 @@ def get_occupation(data, hometown)
       if person["hometown"] == hometown
         output = person["occupation"]
       end
+    break  
     end
   end
   output
