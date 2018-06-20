@@ -1,9 +1,11 @@
 def get_first_name_of_season_winner(data, season)
   # code here
   output = nil
-  data.each do |seas, data_hash|
+  data.each do |seas, person_array|
     if seas == season
-      output = data_hash["name"]
+      person_array.each do |person|
+        if person["status"] == "Winner"
+          output = person["name"]
     end    
   end
   output = output.split(" ")[0]
