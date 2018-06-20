@@ -59,9 +59,7 @@ def get_average_age_for_season(data, season)
   data.each do |seas, person_array|
     if seas == season
       person_array.each do |person|
-        if person["status"] == "Winner"
-          output = person["name"]
-        end
+        age_array << person["age"]
       end  
     end    
   end
