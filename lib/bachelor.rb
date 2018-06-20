@@ -19,7 +19,11 @@ def get_contestant_name(data, occupation)
   data.each do |seas, person_array|
     person_array.each do |person|
       if person["occupation"] == occupation
-        output = person
+        output = person["name"]
+      end
+    end
+  end
+  output
 end
 
 def count_contestants_by_hometown(data, hometown)
