@@ -41,15 +41,15 @@ end
 
 def get_occupation(data, hometown)
   # code here
-  output = nil
+  output = []
   data.each do |seas, person_array|
     person_array.each do |person|
       if person["hometown"] == hometown
-        output = person["occupation"]
+        output << person["occupation"]
       end
     end
   end
-  output
+  output[0]
 end
 
 def get_average_age_for_season(data, season)
