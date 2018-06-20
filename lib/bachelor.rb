@@ -15,7 +15,11 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
-  
+  output = nil
+  data.each do |seas, person_array|
+    person_array.each do |person|
+      if person["occupation"] == occupation
+        output = person
 end
 
 def count_contestants_by_hometown(data, hometown)
