@@ -1,5 +1,12 @@
 def get_first_name_of_season_winner(data, season)
   # code here
+  output = nil
+  data.each do |seas, data_hash|
+    if seas == season
+      output = data_hash["name"]
+    end    
+  end
+  output = output.split(" ")[0]
 end
 
 def get_contestant_name(data, occupation)
