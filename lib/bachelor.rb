@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
   output = nil
   data.each do |seas, data_hash|
     if seas == season
-      output = data_hash[:"name"]
+      output = data_hash["name"]
     end    
   end
   output = output.split(" ")[0]
